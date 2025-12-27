@@ -58,5 +58,77 @@ A web-based **Human Resources (HR) Management System** designed to help organiza
 
 ---
 
-## 📂 Project Structure (Simplified)
+
+
+## Installation
+
+Follow these steps below to install the application.
+
+Or Watch the installation process on [Youtube](https://youtu.be/UHkrsyBcMRM)
+
+- Clone the repository using your termina or command prompt
+```php
+
+git clone https://github.com/muhammadmajd/HRS.git hr
+```
+```
+cd smarthr
+
+```
+
+- Install dependencies
+    - Composer
+
+	```
+	composer install
+
+	```
+
+
+- Create your database
+
+- Rename .env.example to .env Or copy and paste at project root directory and rename the file .env .You can also use this command.
+
+```
+cp .env.example .env
+
+```
+
+- Generate app key with this command
+```
+php artisan key:generate
+
+```
+- Install Reverb
+```
+php artisan reverb:install
+
+```
+
+- Set database connection to your database in the .env file. Make sure to set APP_URL to make your domain.
+
+```
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=smarthr
+DB_USERNAME=root
+DB_PASSWORD=
+
+```
+
+- Run migrations and seeders
+
+```
+php artisan migrate:fresh --seed; php artisan module:migrate --all --seed
+
+```
+
+- Create Symlink
+```
+php artisan storage:link
+```
+
+
+
 
